@@ -1,0 +1,89 @@
+@charset "utf-8"
+/*
+ * Ghvzon 模組化入稿公版 PD_layout-v20221212-15:00
+ * shyu PD_layout-refactor v20221212-15:00
+ *******************************************************************
+ */
+
+// 基本設定
+
+// .PD_wrapper設定
+$wrapper-type: var(--wrapper-type)
+$flex-wrap: var(--flex-wrap)
+$pd-col-pc: var(--pd-col-pc)
+
+// .PD設定
+$pd-padding: var(--pd-direction)
+$pd-direction: var(--pd-direction)
+$pd-br: var(--pd-br)
+$pd-padding: var(--pd-padding)
+$pd-ta: var(--pd-ta)
+
+// 商品主圖
+$pd-img: var(--pd-img)
+
+// 特標
+$pd-h3-bg: var(--pd-h3-bg)
+$pd-h3-br: var(--pd-h3-br)
+$pd-h3-fw: var(--pd-h3-fw)
+
+
+
+.PD_layout
+    // 字體
+    font-size: 16px
+    font-family: "Microsoft JhengHei", system-ui, Helvetica, Arial
+    text-align: left
+
+    .PD_wrapper
+        display: $wrapper-type
+        flex-wrap: $flex-wrap
+        
+        grid-template-columns: repeat($pd-col-pc, minmax(0,1fr))
+        gap: calc(10vw / $pd-col-pc)
+        list-style: none
+
+        .PD_slide
+            aspect-ratio: 1/1
+            counter-increment: num
+            border-radius: $pd-br
+            text-align: center
+            vertical-align: middle
+            padding: $pd-padding
+            overflow: hidden
+            background: lightblue
+            min-width: calc((100% - 10vw)/$pd-col-pc)
+
+            .PD
+                a
+                    color: #fff
+                    text-decoration: none
+                    display: flex
+                    flex-direction: $pd-direction
+
+                    .PD_img
+                        display: $pd-img
+                        img
+                            width: 100%
+                            height: auto
+                            border-radius: $pd-br
+                    .PD_into
+                        h3
+                            background: $pd-h3-bg
+                            border-radius: $pd-h3-br
+                            font-weight: $pd-h3-fw
+                            span
+                    
+
+
+
+
+
+
+
+
+// @include set-wrapper-col(10)
+// @include set-wrapper-col(5)
+// @include set-wrapper-col(4)
+// @include set-wrapper-col(3)
+// @include set-wrapper-col(2)

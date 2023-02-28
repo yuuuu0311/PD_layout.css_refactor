@@ -1,0 +1,16 @@
+{
+    "dependencies": {
+        "sass": "^1.58.3",
+        "scss": "^0.2.4"
+    },
+    "name": "pd_layout.css_refactor",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build-css": "sass ./sass:./css -w"
+    },
+    "author": "",
+    "license": "ISC",
+    "description": ""
+}

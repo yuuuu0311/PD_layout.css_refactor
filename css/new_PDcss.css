@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/* * Ghvzon 模組化入稿公版 PD_layout-v20221212-15:00
+ * * shyu PD_layout-refactor v20221212-15:00
+ * *******************************************************************
+ * */
+.PD_layout {
+  font-size: 16px;
+  font-family: "Microsoft JhengHei", system-ui, Helvetica, Arial;
+  text-align: left;
+}
+.PD_layout .PD_wrapper {
+  display: var(--wrapper-type);
+  flex-wrap: var(--flex-wrap);
+  grid-template-columns: repeat(var(--pd-col-pc), minmax(0, 1fr));
+  gap: calc(10vw / var(--pd-col-pc));
+  list-style: none;
+}
+.PD_layout .PD_wrapper .PD_slide {
+  aspect-ratio: 1/1;
+  counter-increment: num;
+  border-radius: var(--pd-br);
+  text-align: center;
+  vertical-align: middle;
+  padding: var(--pd-padding);
+  overflow: hidden;
+  background: lightblue;
+  min-width: calc((100% - 10vw) / var(--pd-col-pc));
+}
+.PD_layout .PD_wrapper .PD_slide .PD a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  flex-direction: var(--pd-direction);
+}
+.PD_layout .PD_wrapper .PD_slide .PD a .PD_img {
+  display: var(--pd-img);
+}
+.PD_layout .PD_wrapper .PD_slide .PD a .PD_img img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--pd-br);
+}
+.PD_layout .PD_wrapper .PD_slide .PD a .PD_into h3 {
+  background: var(--pd-h3-bg);
+  border-radius: var(--pd-h3-br);
+  font-weight: var(--pd-h3-fw);
+}
+
+/*# sourceMappingURL=new_PDcss.css.map */
